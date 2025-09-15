@@ -1,0 +1,24 @@
+# Игнорируем файлы PyCharm
+.idea/
+
+# Игнорируем виртуальное окружение
+.venv/
+env/
+venv/
+
+# Конфиги и секретные файлы
+.env
+*.log
+
+# Кеши и временные файлы
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Alembic кеши и миграции
+alembic/versions/*.pyc
+
+# Лог-файлы и дампы БД
+*.log
+dump.sql
