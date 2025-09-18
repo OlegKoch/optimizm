@@ -8,6 +8,7 @@ class EmployeeOut(BaseModel):
     id: int
     full_name: str
     position: str
+    photo_url: str | None = None
 
     class Config:
         from_attributes = True

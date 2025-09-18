@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r /tmp/base.txt
 
 
 COPY src/ /app/src/
-COPY alembic.ini /app/alembic.ini
+COPY alembic.docker.ini /app/alembic.docker.ini
 COPY alembic/ /app/alembic/
 
 

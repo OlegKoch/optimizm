@@ -9,4 +9,4 @@ class Employee(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     full_name: Mapped[str] = mapped_column(String(128), nullable=False)
     position: Mapped[str] = mapped_column(String(64), nullable=False)
-
+    photo_path: Mapped[str | None] = mapped_column(String(512), nullable=True)

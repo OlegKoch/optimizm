@@ -3,6 +3,7 @@ version: "3.9"
 services:
   db:
     image: postgres:16
+    container_name: my_db
     restart: unless-stopped
     env_file:
       - .env.docker
@@ -13,6 +14,7 @@ services:
 
 
   web:
+    container_name: my_web
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,7 +24,7 @@ services:
     env_file:
       - .env.docker
     command: >
-        sh -c "alembic upgrade head && uvicorn src.main:app --host 0.0.0.0 --port 8000"
+        sh -c "alembic -c alembic.docker.ini upgrade head && uvicorn src.main:app --host 0.0.0.0 --port 8000"
     ports:
       - "8000:8000"
 
