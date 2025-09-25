@@ -12,7 +12,7 @@ from src.database import get_db
 from src.employees.models import Employee
 from src.employees.schemas import EmployeeCreate, EmployeeOut
 
-router = APIRouter(prefix='/employees', tags=['employees'])
+router = APIRouter(prefix='/api/v1/employees', tags=['employees'])
 
 ALLOWED = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp"}
 MAX_SIZE = 10 * 1024 * 1024

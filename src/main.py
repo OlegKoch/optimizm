@@ -5,6 +5,8 @@ from starlette.staticfiles import StaticFiles
 
 from src.auth.router import router as auth_router
 from src.employees.router import router as employees_router
+from src.services.router import router as services_router
+from src.miniapp.router import router as order_router
 import src.config as config
 
 
@@ -18,8 +20,8 @@ app.mount("/static", StaticFiles(directory="uploads"), name="static")
 
 app.include_router(auth_router)
 app.include_router(employees_router)
-
-
+app.include_router(services_router)
+app.include_router(order_router)
 
 
 @app.get("/config-check")

@@ -7,6 +7,8 @@ from alembic import context
 from src.database import Base
 import src.auth.models
 import src.employees.models
+import src.services.models
+import src.miniapp.models
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

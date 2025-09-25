@@ -8,7 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import IntegrityError
 from src.auth.models import User
 
-router = APIRouter(prefix="/auth", tags= ["auth"])
+router = APIRouter(prefix="/api/v1/auth", tags=['auth'])
 
 @router.post("/register", response_model=UserOut, status_code=status.HTTP_201_CREATED)
 async def register(payload: RegisterIn, db: AsyncSession = Depends(get_db)):
